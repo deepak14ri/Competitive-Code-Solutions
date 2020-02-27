@@ -1,0 +1,24 @@
+# Write your code here
+N=int(input())
+for i in range(N):
+    n=int(input())
+    c = list(map(int, input().split()))
+    d = list(map(int, input().split()))
+    s=0
+    e=n
+    m=min(c)
+    while m<c[0]:
+        k=c.index(m)
+        s=s+m*sum(d[k:e])
+        m=min(c[0:k])
+        e=k
+    s=s+m*sum(d[:e])
+    print(s)
+    
+    '''
+    input:
+    1
+    2
+    5 1
+    1 2
+    output: 7   '''
