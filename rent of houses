@@ -1,0 +1,25 @@
+n,s,y = map(int,input().split()) #5 10 4,    n = no. of house,s = curr sal ,y = year of work
+arr = list(map(int,input().split())) #3 2 4 1 5,    --->output 150
+start,i = 0,1;
+curr_sum = arr[0]
+lst = []
+while i <= n:
+    while curr_sum > s and start < i:
+        curr_sum = curr_sum - arr[start]
+        start = start + 1
+			
+    if curr_sum == s:
+        lst.append(arr[start:i])
+    if i < n: 
+	    curr_sum = curr_sum + arr[i] 
+    i += 1
+t = lst[0]
+temp = sum(lst[0])
+i = 0
+ls = []
+while i<len(lst[0])-1:
+    s2 = temp*2
+    ls.append(s2)
+    i = i+1
+    temp = s2
+print(sum(ls)+s)
