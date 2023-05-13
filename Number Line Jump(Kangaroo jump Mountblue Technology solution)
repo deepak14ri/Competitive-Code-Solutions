@@ -1,0 +1,16 @@
+function kangaroo(x1, v1, x2, v2) {
+    // Write your code here
+    var count=0;
+    for(var i=0;i<=10000;i++){
+        var x1 = x1+v1;
+        var x2 = x2+v2;
+        if(x1==x2){
+            count++;
+        }
+    }
+    if(count>0){
+        return 'YES';
+    }else{
+        return 'NO';
+    }
+}
