@@ -1,0 +1,12 @@
+function sockMerchant(n, ar) {
+    // Write your code here
+    var newArr = ar.sort();
+    var count = 0;
+    for(let j=0;j<newArr.length-1;j++){
+        if(newArr[j]===newArr[j+1]){
+            j++;
+            count += 1;
+        }
+    }
+    return count;
+}
